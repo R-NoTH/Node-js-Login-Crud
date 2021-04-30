@@ -2,7 +2,7 @@ const { static } = require('express');
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
-
+const morgan = require('morgan');
 
 // initializations
 const app = express();
@@ -19,9 +19,10 @@ app.engine('.hbs',exphbs({
 }));
 app.set('view engine','.hbs');
 
-//middlewares
+//middlewares\
+app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
-// global variables
+// global variables..
 
 // routes
 app.use(require('./routes/index.routes'));

@@ -1,0 +1,27 @@
+<div class="row">
+  {{#each notes}}
+  <div class="col-md-3">
+    <div class="card text-white bg-dark" style="max-width: 18rem;">
+      <div class="card-header">
+        {{ title }}&nbsp;&nbsp;
+        <a href="/notes/edit/">
+
+          <i style="color: #89a9e9;" class="fas fa-pencil-alt"></i>
+        </a>
+
+      </div>
+      <div class="card-body">
+        {{!-- <h5 class="card-title">Dark card title</h5> --}}
+        <p class="card-text">{{ description }}.</p>
+      </div>
+      <div class="card-footer text-muted">
+        <form action="/notes/delete/{{_id}}" method="POST">
+
+          <button type="submit" style="border-color:#ffde90; color:#ffde90 " class="btn btn-sm">Delete</button>
+        </form>
+      </div>
+    </div>
+    <br>
+  </div>
+  {{/each}}
+</div>

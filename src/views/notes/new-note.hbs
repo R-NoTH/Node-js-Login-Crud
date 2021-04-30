@@ -1,0 +1,20 @@
+<div class="col-4 mx-auto">
+  <div class="card text-center" style="background-color:#393e46;">
+    <div class="card-header">
+      <h5 style="color: #ffd369;">New Note</h5>
+    </div>
+    <div class="card-body">
+      <form action="/note/new-note" method="POST">
+        <div class="mb-3">
+          <input type="text" class="form-control" name="title" placeholder="Title" autofocus>
+        </div>
+        <div class="">
+          <textarea class="form-control" type="text" name="description" placeholder="Description"></textarea>
+        </div>
+    </div>
+    <div style="border-radius: ;" class="card-footer text-muted">
+      <button class="btn " style="background-color:#ffd369" type="submit">Submit</button>
+    </div>
+    </form>
+  </div>
+</div>
